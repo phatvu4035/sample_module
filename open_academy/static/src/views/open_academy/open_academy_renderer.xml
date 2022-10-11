@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="open_academy.OpenAcademyRenderer" owl="1">
+        <div class="o_open_academy_renderer">
+            <div class="o_open_academy_container" t-ref="container">
+                <table class="o_list_table table table-sm table-hover table-striped o_list_table_ungrouped">
+                    <thead>
+                        <td>Name</td>
+                        <td>Start Date</td>
+                        <td>Duration</td>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="model.data" t-as="session">
+                            <tr>
+                                <td><t t-esc="session.name"/></td>
+                                <td><t t-esc="session.start_date"/></td>
+                                <td><t t-esc="session.duration"/></td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </t>
+
+</templates>
